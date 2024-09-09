@@ -45,13 +45,13 @@
                     response.sendRedirect("inicioUsers.html");  // Redirigir a la página de usuario
                 } else {
                     // Redirigir con mensaje de error
-                    response.sendRedirect("LoginAdmin.html?mensaje=error");
+                    response.sendRedirect("LoginAdmin.jsp?mensaje=error");
                 }
             }
         } catch (ClassNotFoundException e) {
-            response.sendRedirect("LoginAdmin.html?mensaje=driverError");
+            response.sendRedirect("LoginAdmin.jsp?mensaje=driverError");
         } catch (SQLException e) {
-            response.sendRedirect("LoginAdmin.html?mensaje=dbError");
+            response.sendRedirect("LoginAdmin.jsp?mensaje=dbError");
         } finally {
             if (rs != null) { try { rs.close(); } catch (SQLException e) { /* Log error */ } }
             if (pstmt != null) { try { pstmt.close(); } catch (SQLException e) { /* Log error */ } }
@@ -59,6 +59,6 @@
         }
     } else {
         // Redirigir con mensaje de campos vacíos
-        response.sendRedirect("LoginAdmin.html?mensaje=error");
+        response.sendRedirect("LoginAdmin.jsp?mensaje=error");
     }
 %>
