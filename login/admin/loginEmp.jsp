@@ -42,7 +42,7 @@
                     // Guardar el correo electrónico y el ID del usuario en la sesión
                     session.setAttribute("userEmail", rs.getString("email"));
                     session.setAttribute("userId", rs.getInt("id"));
-                    response.sendRedirect("inicioUsers.jsp");  // Redirigir a la página de usuario
+                    response.sendRedirect("inicioUsers.html");  // Redirigir a la página de usuario
                 } else {
                     // Redirigir con mensaje de error
                     response.sendRedirect("LoginAdmin.html?mensaje=error");
