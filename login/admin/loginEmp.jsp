@@ -12,9 +12,10 @@
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conexion = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/curitas",
-                "root",
-                "");
+    "jdbc:mysql://sql5.freesqldatabase.com:3306/sql5730471",  // URL de la base de datos
+    "sql5730471",  // Nombre de usuario
+    "bTNNtAtnGX"   // Contraseña
+);
 
             // Preparar la sentencia SQL para buscar al empleado
             String sql = "SELECT * FROM empleados WHERE email = ? AND passwd = ?";
